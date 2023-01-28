@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск</title>
+    <style>
+      form {
+        width: 950px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Поиск</h1>
+      <hr />
+    </header>
+    <main>
+      <div>
+        <form action="https://fom.in.ua/echo" method="get">
+          <fieldset>
+            <legend>Поиск авто</legend>
+            <label for="type-body">Тип кузова</label>
+            <select id="type-body" name="type body">
+              <option value="any">Любой</option>
+              <option value="cars">Легковые</option>
+              <option value="buses">Автобусы</option>
+              <option value="moto">Мото</option>
+              <option value="trucks">Грузовики</option>
+              <option value="trailers">Прицепы</option>
+              <option value="special-equipment">Спецтехника</option>
+              <option value="agricultural-machinery">Сельхозтехника</option>
+              <option value="water-transport">Водный транспорт</option>
+              <option value="air-transport">Воздушный транспорт</option>
+              <option value="motorhomes">Автодома</option>
+            </select>
+            <span id="price">Цена</span>
+            <input
+              id="price-left"
+              type="number"
+              name="price-left"
+              placeholder="от"
+            />
+            <input
+              id="price-right"
+              type="number"
+              name="price-right"
+              placeholder="до"
+            />
+            <select id="currency" name="currency">
+              <option value="$">$</option>
+              <option value="€">€</option>
+              <option value="грн.">грн.</option>
+            </select>
+            <label for="bargain">Возможен торг</label>
+            <input id="bargain" name="bargain" type="checkbox" />
+            <label for="exchange">Обмен</label>
+            <input id="exchange" name="exchange" type="checkbox" />
+            <p>
+              <span id="year-of-issue">Год выпуска</span>
+              <input
+                id="year-of-issue-left"
+                name="year-of-issue-left"
+                type="number"
+                placeholder="от"
+              />
+              <input
+                id="year-of-issue-right"
+                name="year-of-issue-right"
+                type="number"
+                placeholder="до"
+              />
+            </p>
+            <p>
+              <label for="car-brand">Марка авто</label>
+              <select id="car-brand" name="car-brand">
+                <option value="any">Любая</option>
+                <option value="toyota">Toyota</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="bmw">BMW</option>
+                <option value="honda">Honda</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="ford">Ford</option>
+                <option value="hyndai">Hyundai</option>
+                <option value="audi">Audi</option>
+                <option value="porsche">Porsche</option>
+                <option value="nissan">Nissan</option>
+                <option value="other">Другая</option>
+              </select>
+              <label for="country-manufacture">Страна производитель</label>
+              <select id="country-manufacture" name="country-manufacture">
+                <option value="any">Любая</option>
+                <option value="usa">США</option>
+                <option value="eu-countries">Страны ЕС</option>
+                <option value="china">Китай</option>
+                <option value="japan">Япония</option>
+                <option value="other">Другая</option>
+              </select>
+            </p>
+            <p>
+              <span>Состояние</span>
+              <br />
+              <label for="accident">Был в ДТП:</label>
+              <input id="accident" type="checkbox" name="accident" />
+              <label for="credit">В кредите:</label>
+              <input id="credit" name="credit" type="checkbox" />
+              <label for="uncleared">Нерастаможен:</label>
+              <input id="uncleared" name="uncleared" type="checkbox" />
+              <label for="confiscate">Конфискат:</label>
+              <input id="confiscate" name="confiscate" type="checkbox" />
+              <label for="garage">Гаражное хранение:</label>
+              <input id="garage" name="garage" type="checkbox" />
+              <label for="fowner">Первый владелец:</label>
+              <input id="fowner" name="fowner" type="checkbox" />
+              <label for="service">Сервисная книжка:</label>
+              <input id="service" name="service" type="checkbox" />
+            </p>
+            <label for="type-fuel">Вид топлива</label>
+            <select id="type-fuel" name="type-fuel">
+              <option value="any">Любой</option>
+              <option value="gasoline">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="hybrid">Гибрид</option>
+              <option value="electro">Электро</option>
+              <option value="gas">Газ</option>
+            </select>
+            <label for="gearbox">Тип коробки передач</label>
+            <select id="gearbox" name="gearbox">
+              <option value="any">Любой</option>
+              <option value="manual">МКПП</option>
+              <option value="auto">АКПП</option>
+              <option value="tiptronic">Типтроник</option>
+              <option value="robot">Робот</option>
+              <option value="variator">Вариатор</option>
+            </select>
+            <label for="color">Цвет</label>
+            <select id="color" name="color">
+              <option value="any">Любой</option>
+              <option value="white">Белый</option>
+              <option value="black">Черный</option>
+              <option value="red">Красный</option>
+              <option value="blue">Синий</option>
+              <option value="green">Зеленый</option>
+              <option value="otter">Другой</option>
+            </select>
+            <p>
+              <span>Комфорт</span>
+              <br />
+              <label for="hatch">Люк:</label>
+              <input name="hatch" id="hatch" type="checkbox" />
+              <label for="skin"> Кожа в залоне:</label>
+              <input name="skin" id="skin" type="checkbox" />
+              <label for="conditioner">Кондиционер:</label>
+              <input name="conditioner" id="conditioner" type="checkbox" />
+              <label for="handlebar">Регулировка руля:</label>
+              <input name="handlebar" id="handlebar" type="checkbox" />
+              <label for="climate">Климат контроль:</label>
+              <input name="climate" id="climate" type="checkbox" />
+              <label for="parktronic">Парктроник:</label>
+              <input name="parktronic" id="parktronic" type="checkbox" />
+              <label for="seat">Подогрев сидений:</label>
+              <input name="seat" id="seat" type="checkbox" />
+            </p>
+            <input name="reset" id="reset" type="reset" value="Сброс" />
+            <input id="submit" name="submit" type="submit" value="Поиск" />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      <span>© 2023 Эта страница создана для домашнего задания.</span>
+    </footer>
+  </body>
+</html>
